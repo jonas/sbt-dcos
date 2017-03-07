@@ -20,8 +20,8 @@ deploy := {
   val appId = name.value
   val json = baseDirectory.value / "marathon.json"
 
-  def marathon(args: String*): Process =
-    Process("docker" +: args.toSeq)
+  def marathon(args: String*) =
+    Process(dcosCli.value.getAbsolutePath :: "marathon" :: args.toList)
 
   if (marathon("task", "list", appId).!!.contains(appId))
     marathon("app", "update", "--force", appId) #< json ! streams.value.log

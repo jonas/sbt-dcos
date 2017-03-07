@@ -1,0 +1,24 @@
+{
+  "id": "nginx",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "nginx:latest",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 80, "protocol": "tcp" }
+      ]
+    }
+  },
+  "instances": 1,
+  "cpus": 0.1,
+  "mem": 128,
+  "healthChecks": [
+    {
+      "path": "/health",
+      "portIndex": 0,
+      "protocol": "HTTP"
+    }
+  ]
+}
