@@ -14,10 +14,10 @@ versionWithGit
 git.useGitDescribe := true
 
 enablePlugins(BintrayPlugin)
-bintrayRepository := "maven"
+bintrayRepository := "sbt-plugins"
 bintrayOrganization := Some("fonseca")
 publishArtifact in Test := false
-publishMavenStyle := true
+publishMavenStyle := false
 
 enablePlugins(ReleasePlugin)
 releaseCrossBuild := true
