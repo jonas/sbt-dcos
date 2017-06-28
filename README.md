@@ -7,10 +7,9 @@ Provides a managed [DC/OS CLI] binary.
 
 ## Usage
 
-To use this library configure your sbt project with the following lines:
+To use this library in your sbt project add the following line to `project/plugins.sbt`:
 ```sbt
-resolvers += Resolver.bintrayIvyRepo("fonseca", "sbt-plugins")
-addSbtPlugin("io.github.jonas" % "sbt-dcos" % "0.1.1")
+addSbtPlugin("io.github.jonas" % "sbt-dcos" % "0.1.2")
 ```
 
 Then use to deploy, for example to Marathon:
