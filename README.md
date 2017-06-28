@@ -9,7 +9,7 @@ Provides a managed [DC/OS CLI] binary.
 
 To use this library configure your sbt project with the following lines:
 ```sbt
-resolvers += Resolver.url("fonseca-sbt-plugins", url("https://dl.bintray.com/fonseca/sbt-plugins"))(Resolver.ivyStylePatterns)
+resolvers += Resolver.bintrayIvyRepo("fonseca", "sbt-plugins")
 addSbtPlugin("io.github.jonas" % "sbt-dcos" % "0.1.1")
 ```
 
